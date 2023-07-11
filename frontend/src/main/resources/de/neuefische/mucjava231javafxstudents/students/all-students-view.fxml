@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.neuefische.mucjava231javafxstudents.controller.AllStudentsViewController">
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Studentenübersicht" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Text>
+    </top>
+    <center>
+        <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="104.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="105.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="44.0" prefWidth="574.0" spacing="10.0">
+                            <children>
+                                <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Ausgewählter Studi&gt;" textAlignment="CENTER" wrappingWidth="177.6171875">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Text>
+                                <Button fx:id="editStudentButton" disable="true" mnemonicParsing="false" onAction="#switchToEditSelectedStudentView" prefHeight="25.0" prefWidth="100.0" text="Bearbeiten" />
+                        <Button fx:id="deleteStudentButton" disable="true" mnemonicParsing="false" onAction="#deleteSelectedStudent" prefHeight="25.0" prefWidth="100.0" text="Löschen" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="600.0" spacing="40.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#switchToWelcomeView" prefHeight="25.0" prefWidth="180.0" text="Zurück zum Start" />
+                                <Button mnemonicParsing="false" onAction="#switchToCreateNewStudentView" prefHeight="25.0" prefWidth="180.0" text="Neuen Studenten erstellen" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </VBox>
+            </children>
+        </Pane>
+    </bottom>
+</BorderPane>

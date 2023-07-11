@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<FlowPane prefHeight="539.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.neuefische.mucjava231javafxstudents.controller.RegistrationConfirmationViewController">
+   <children>
+      <VBox prefHeight="539.0" prefWidth="615.0" spacing="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Studentendetails" textAlignment="CENTER" wrappingWidth="614.21630859375">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="61.0" prefWidth="615.0">
+               <children>
+                  <Label fx:id="firstName" prefHeight="17.0" prefWidth="226.0" text="Vorname:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="firstNameLabel" prefHeight="17.0" prefWidth="226.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="71.0" prefWidth="615.0">
+               <children>
+                  <Label fx:id="lastName" prefHeight="17.0" prefWidth="226.0" text="Nachname:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lastNameLabel" prefHeight="17.0" prefWidth="226.0"/>
+               </children>
+            </HBox>
+            <HBox prefHeight="71.0" prefWidth="615.0">
+               <children>
+                  <Label fx:id="email" prefHeight="17.0" prefWidth="226.0" text="Email:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="emailLabel" prefHeight="17.0" prefWidth="226.0"/>
+               </children>
+            </HBox>
+            <HBox prefHeight="71.0" prefWidth="615.0">
+               <children>
+                  <Label fx:id="courseOfStudies" prefHeight="17.0" prefWidth="226.0" text="Studiengang:">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="courseOfStudiesLabel" prefHeight="17.0" prefWidth="226.0"/>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switchToWelcomeView" prefHeight="25.0" prefWidth="145.0" text="Zurück zum Start" />
+                  <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToAllStudentsView" prefHeight="25.0" prefWidth="145.0" text="Alle Studenten sehen" />
+                  <Button mnemonicParsing="false" onAction="#switchToEditSelectedStudentView" prefHeight="25.0" prefWidth="145.0" text="Daten bearbeiten" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</FlowPane>
