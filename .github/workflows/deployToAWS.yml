@@ -51,6 +51,6 @@ jobs:
           push: true
           #Set dockerhub project (replace "bartfastiel/java-capstone-project.de-example-app")
           tags: sergejneuefische/javafx-student-db:latest
-          context: .
+          context: ./backend
 
  
