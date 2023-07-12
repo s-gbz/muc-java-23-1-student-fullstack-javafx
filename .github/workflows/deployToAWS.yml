@@ -49,7 +49,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          #Set dockerhub project (replace "bartfastiel/java-capstone-project.de-example-app")
+          #Set dockerhub project (replace "sergejneuefische/javafx-student-db")
           tags: sergejneuefische/javafx-student-db:latest
           context: ./backend
 
@@ -61,12 +61,12 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: capstone-project.de
-          #Set App Name (replace "example" with "alpha"-"tango")
+          #Set App Name (replace "antimon" with "oxygen", "phosphorus", "mercury")
           username: antimon
           password: ${{ secrets.SSH_PASSWORD }}
-          #Set App Name (replace "example" with "alpha"-"tango")
-          #Set dockerhub project (replace "bartfastiel/java-capstone-project.de-example-app")
-          #Set IP (replace "10.0.1.99" with "10.0.1.1"-"10.0.1.20")
+          #Set App Name (replace "antimon" with "oxygen", "phosphorus", "mercury")
+          #Set dockerhub project (replace "sergejneuefische/javafx-student-db")
+          #Set IP (replace "10.0.2.1" with "10.0.2.14", "10.0.2.15" or "10.0.2.16")
           script: |
             docker stop antimon
             docker rm antimon
@@ -77,7 +77,7 @@ jobs:
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v3
         with:
-          #Set App Name (replace "example" with "alpha"-"tango")
+          #Set App Name (replace "antimon" with "oxygen", "phosphorus", "mercury")
           url: http://antimon.capstone-project.de
           max-attempts: 3
           retry-delay: 5s
